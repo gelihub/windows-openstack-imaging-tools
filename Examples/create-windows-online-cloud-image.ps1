@@ -14,7 +14,8 @@
 
 $ErrorActionPreference = "Stop"
 
-$scriptPath =Split-Path -Parent $MyInvocation.MyCommand.Definition | Split-Path
+# Removed " | Split-Path" from the end of the line below
+$scriptPath =Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 git -C $scriptPath submodule update --init
 if ($LASTEXITCODE) {
