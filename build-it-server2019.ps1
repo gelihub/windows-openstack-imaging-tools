@@ -46,14 +46,14 @@ try {
 # The Windows image file path that will be generated
 # $windowsImagePath = "C:\images\win10-1903-AP.qcow2"
 # $windowsImagePath = "C:\images\win10-1903-AP.VHDX"
-$windowsImagePath = "C:\Users\ekouraki-admin\Documents\windows-openstack-images\images\server2019.VHDX"
+$windowsImagePath = "..\..\windows-openstack-images\images\server2019.VHDX"
 
 # The wim file path is the installation image on the Windows ISO
 # $wimFilePath = "E:\Sources\install.wim"
-$wimFilePath = "C:\Users\ekouraki-admin\Documents\windows-openstack-images\extractedISOs\server2019\sources\install.wim"
+$wimFilePath = "..\..\windows-openstack-images\extractedISOs\server2019\sources\install.wim"
 
 # VirtIO ISO contains all the synthetic drivers for the KVM hypervisor
-$virtIOISOPath = "C:\Users\ekouraki-admin\Documents\windows-openstack-images\vitio\virtio.iso"
+$virtIOISOPath = "..\..\windows-openstack-images\vitio\virtio.iso"
 
 # Note(avladu): Do not use stable 0.1.126 version because of this bug https://github.com/crobinso/virtio-win-pkg-scripts/issues/10
 # Note (atira): Here https://fedorapeople.org/groups/virt/virtio-win/CHANGELOG you can see the changelog for the VirtIO drivers
@@ -65,7 +65,7 @@ $virtIODownloadLink = "https://fedorapeople.org/groups/virt/virtio-win/direct-do
 # Extra drivers path contains the drivers for the baremetal nodes
 # Examples: Chelsio NIC Drivers, Mellanox NIC drivers, LSI SAS drivers, etc.
 # The cmdlet will recursively install all the drivers from the folder and subfolders
-$extraDriversPath = "C:\Users\ekouraki-admin\Documents\windows-openstack-images\drivers"
+$extraDriversPath = "..\..\windows-openstack-images\drivers"
 
 # Every Windows ISO can contain multiple Windows flavors like Core, Standard, Datacenter
 # Usually, the second image version is the Standard one
