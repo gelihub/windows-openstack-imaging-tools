@@ -22,7 +22,7 @@ $scriptPath =Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $scriptPath
 
-pushd $scriptPath
+Push-Location $scriptPath
 
 git -C $scriptPath submodule update --init
 if ($LASTEXITCODE) {
@@ -135,4 +135,4 @@ Set-IniFileValue -Path $configFilePath -Section "cloudbase_init" -Key "msi_path"
 
 New-WindowsOnlineImage -ConfigFilePath $configFilePath
 
-popd
+Pop-Location
