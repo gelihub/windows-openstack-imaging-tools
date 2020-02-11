@@ -52,7 +52,7 @@ $windowsImagePath = "C:\images\win10-1903-AP.VHDX"
 $wimFilePath = "C:\Users\ekouraki\Downloads\ISOs\Win-10-1903-extracted\SW_DVD9_Win_Pro_10_1903_64BIT_English_Pro_Ent_EDU_N_MLF_X22-028901\sources\install.wim"
 
 # VirtIO ISO contains all the synthetic drivers for the KVM hypervisor
-$virtIOISOPath = "C:\images\virtio.iso"
+$virtIOISOPath = "..\..\windows-openstack-images\virtio\virtio.iso"
 
 # Note(avladu): Do not use stable 0.1.126 version because of this bug https://github.com/crobinso/virtio-win-pkg-scripts/issues/10
 # Note (atira): Here https://fedorapeople.org/groups/virt/virtio-win/CHANGELOG you can see the changelog for the VirtIO drivers

@@ -53,7 +53,7 @@ $windowsImagePath = "..\..\windows-openstack-images\images\server2019.VHDX"
 $wimFilePath = "..\..\windows-openstack-images\extractedISOs\server2019\sources\install.wim"
 
 # VirtIO ISO contains all the synthetic drivers for the KVM hypervisor
-$virtIOISOPath = "..\..\windows-openstack-images\vitio\virtio.iso"
+$virtIOISOPath = "..\..\windows-openstack-images\virtio\virtio.iso"
 
 # Note(avladu): Do not use stable 0.1.126 version because of this bug https://github.com/crobinso/virtio-win-pkg-scripts/issues/10
 # Note (atira): Here https://fedorapeople.org/groups/virt/virtio-win/CHANGELOG you can see the changelog for the VirtIO drivers
