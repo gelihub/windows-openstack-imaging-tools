@@ -45,11 +45,11 @@ try {
 
 # The Windows image file path that will be generated
 # $windowsImagePath = "C:\images\win10-1903-AP.qcow2"
-$windowsImagePath = "C:\images\win10-1903-AP.VHDX"
+$windowsImagePath = "..\..\windows-openstack-images\win10-1903-AP.VHDX"
 
 # The wim file path is the installation image on the Windows ISO
 # $wimFilePath = "E:\Sources\install.wim"
-$wimFilePath = "C:\Users\ekouraki\Downloads\ISOs\Win-10-1903-extracted\SW_DVD9_Win_Pro_10_1903_64BIT_English_Pro_Ent_EDU_N_MLF_X22-028901\sources\install.wim"
+$wimFilePath = "..\..\windows-openstack-images\SW_DVD9_Win_Pro_10_1903_64BIT_English_Pro_Ent_EDU_N_MLF_X22-028901\sources\install.wim"
 
 # VirtIO ISO contains all the synthetic drivers for the KVM hypervisor
 $virtIOISOPath = "..\..\windows-openstack-images\virtio\virtio.iso"
@@ -64,7 +64,7 @@ $virtIODownloadLink = "https://fedorapeople.org/groups/virt/virtio-win/direct-do
 # Extra drivers path contains the drivers for the baremetal nodes
 # Examples: Chelsio NIC Drivers, Mellanox NIC drivers, LSI SAS drivers, etc.
 # The cmdlet will recursively install all the drivers from the folder and subfolders
-$extraDriversPath = "C:\drivers\"
+$extraDriversPath = "..\..\windows-openstack-images\drivers"
 
 # Every Windows ISO can contain multiple Windows flavors like Core, Standard, Datacenter
 # Usually, the second image version is the Standard one
