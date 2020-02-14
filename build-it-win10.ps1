@@ -45,7 +45,7 @@ try {
 
 # The Windows image file path that will be generated
 # $windowsImagePath = "C:\images\win10-1903-AP.qcow2"
-$windowsImagePath = "..\..\windows-openstack-images\win10-1903-AP.VHDX"
+$windowsImagePath = "..\..\windows-openstack-images\images\win10-1903-AP.VHDX"
 
 # The wim file path is the installation image on the Windows ISO
 # $wimFilePath = "E:\Sources\install.wim"
