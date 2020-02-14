@@ -49,7 +49,7 @@ $windowsImagePath = "..\..\windows-openstack-images\win10-1903-AP.VHDX"
 
 # The wim file path is the installation image on the Windows ISO
 # $wimFilePath = "E:\Sources\install.wim"
-$wimFilePath = "..\..\windows-openstack-images\SW_DVD9_Win_Pro_10_1903_64BIT_English_Pro_Ent_EDU_N_MLF_X22-028901\sources\install.wim"
+$wimFilePath = "..\..\windows-openstack-images\extractedISOs\win10\sources\install.wim"
 
 # VirtIO ISO contains all the synthetic drivers for the KVM hypervisor
 $virtIOISOPath = "..\..\windows-openstack-images\virtio\virtio.iso"
@@ -68,7 +68,7 @@ $extraDriversPath = "..\..\windows-openstack-images\drivers"
 
 # Every Windows ISO can contain multiple Windows flavors like Core, Standard, Datacenter
 # Usually, the second image version is the Standard one
-$image = (Get-WimFileImagesInfo -WimFilePath $wimFilePath)[2]
+$image = (Get-WimFileImagesInfo -WimFilePath $wimFilePath)[1]
 
 # Make sure the switch exists and it allows Internet access if updates
 # are to be installed
@@ -133,6 +133,7 @@ Set-IniFileValue -Path $configFilePath -Section "cloudbase_init" -Key "msi_path"
 
 # This scripts generates ...
 
-New-WindowsOnlineImage -ConfigFilePath $configFilePath
+#New-WindowsOnlineImage -ConfigFilePath $configFilePath
+New-WindowsCloudImage -ConfigFilePath $configFilePath
 
 Pop-Location

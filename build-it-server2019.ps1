@@ -134,6 +134,6 @@ Set-IniFileValue -Path $configFilePath -Section "cloudbase_init" -Key "msi_path"
 
 # This scripts generates ...
 
-New-WindowsOnlineImage -ConfigFilePath $configFilePath
-
+#New-WindowsOnlineImage -ConfigFilePath $configFilePath
+New-WindowsCloudImage -ConfigFilePath $configFilePath
 Pop-Location
