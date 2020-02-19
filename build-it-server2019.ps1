@@ -46,7 +46,7 @@ try {
 # The Windows image file path that will be generated
 # $windowsImagePath = "C:\images\win10-1903-AP.qcow2"
 # $windowsImagePath = "C:\images\win10-1903-AP.VHDX"
-$windowsImagePath = "..\..\windows-openstack-images\images\server2019.VHDX"
+$windowsImagePath = "..\..\windows-openstack-images\images\server2019-With-Desktop.VHDX"
 
 # The wim file path is the installation image on the Windows ISO
 # $wimFilePath = "E:\Sources\install.wim"
@@ -69,7 +69,8 @@ $extraDriversPath = "..\..\windows-openstack-images\drivers"
 
 # Every Windows ISO can contain multiple Windows flavors like Core, Standard, Datacenter
 # Usually, the second image version is the Standard one
-$image = (Get-WimFileImagesInfo -WimFilePath $wimFilePath)[2]
+# Index is standard server with desktop
+$image = (Get-WimFileImagesInfo -WimFilePath $wimFilePath)[1]
 
 # Make sure the switch exists and it allows Internet access if updates
 # are to be installed
